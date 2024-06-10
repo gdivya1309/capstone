@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Popular Movies</title>
+    <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+    <h1>Popular Movies</h1>
+    <div class="movies">
+        <% movies.forEach(movie => { %>
+            <div class="movie">
+                <h2><%= movie.title %></h2>
+                <img src="https://image.tmdb.org/t/p/w500<%= movie.poster_path %>" alt="<%= movie.title %>">
+                <p>Release Date: <%= movie.release_date %></p>
+                <p>Rating: <%= movie.vote_average %></p>
+            </div>
+        <% }) %>
+    </div>
+</body>
+</html>
